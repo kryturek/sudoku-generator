@@ -45,6 +45,8 @@ def count_solutions(grid):
                             grid[row][col] = num
                             solve_and_count(grid)
                             grid[row][col] = 0
+                            if solutions[0] > 1:
+                                return
                     return
         solutions[0] += 1
     
